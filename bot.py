@@ -87,26 +87,9 @@ async def SilentXBotz_start():
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
     
-import asyncio
-from database.ia_filterdb import Media
-import logging
-
-async def show_sample():
-    # Ye line ensure karegi ki sample data print ho
-    doc = await Media.collection.find_one()
-    print("Sample document:")
-    print(doc)
-
-async def SilentXBotz_start():
-    print("Initializing Your Bot!")
-    # SilentX start karne ki logic
-    # await SilentX.start() # agar aapne bot start karna hai to uncomment karen
-    # Apne bot ke start hone ke baad show_sample() ko call karenge
-
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()  # Yaha par event loop ko define kiya gaya
+    loop = asyncio.get_event_loop()
     try:
-        loop.run_until_complete(SilentXBotz_start())  # Bot start hoga
-        loop.run_until_complete(show_sample())  # Aur fir show_sample() chalega
+        loop.run_until_complete(SilentXBotz_start())
     except KeyboardInterrupt:
         logging.info('Service Stopped Bye 👋')
