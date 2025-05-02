@@ -48,10 +48,10 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Deepak")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Deepak_files')
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Lalu:Lalu@cluster0.bkuzjzl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
-if MULTIPLE_DB == True:
+if MULTIPLE_DB == False:
     DATABASE_URI = DATABASE_URI
     DATABASE_URI2 = DATABASE_URI
 else:
