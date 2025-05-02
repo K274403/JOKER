@@ -93,3 +93,12 @@ if __name__ == '__main__':
         loop.run_until_complete(SilentXBotz_start())
     except KeyboardInterrupt:
         logging.info('Service Stopped Bye 👋')
+        from database.ia_filterdb import Media
+
+async def show_sample():
+    doc = await Media.collection.find_one()
+    print("Sample document:")
+    print(doc)
+
+loop.run_until_complete(show_sample())
+
