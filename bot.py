@@ -101,4 +101,3 @@ async def show_sample():
     print(doc)
 
 loop.run_until_complete(show_sample())
-
