@@ -94,7 +94,7 @@ class script(object):
 
 <code>/set_log_channel -100*******</code>
 
-<code>/set_fsub -100*******</code>
+<code>/set_fsub -1002023191399</code>
 
 ʏᴏᴜ ᴄᴀɴ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀʟʟ ᴅᴇᴛᴀɪʟs ʙʏ /details ᴄᴏᴍᴍᴀɴᴅ
 
