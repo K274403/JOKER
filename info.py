@@ -17,7 +17,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'media_search')
 API_ID = int(environ.get('API_ID', '21527086'))
 API_HASH = environ.get('API_HASH', '11caabfc20fca699feff0c24213b1a80')
-BOT_TOKEN = environ.get('BOT_TOKEN', "7817560318:AAHjmRd0g0cAXfnAXHDK1463R0xIg9yowxk")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
@@ -40,7 +40,7 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002265223323') 
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002396546048') 
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '') 
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Rohan:Rohan@cluster0.jajgrik.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
